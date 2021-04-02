@@ -1,5 +1,6 @@
 import react,{Component} from 'react';
-
+import {Button,ConfigProvider} from 'antd';
+import CarouseComponent from './ComponentManager/CarouselCompenent'
 class Main extends Component{
 
     constructor(props){
@@ -11,9 +12,11 @@ class Main extends Component{
 
     render(){
         return(
+           
             <div>
-                你好!  {this.state.name}
+                <CarouseComponent />
             </div>
+            
         )
     }
 }

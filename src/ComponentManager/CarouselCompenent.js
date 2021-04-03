@@ -44,7 +44,7 @@ class CarouseComponent extends Component {
                     <h3 style={this.state.contentStyle}>4</h3>
                 </div>
                 <div>
-                    <h3 style={this.state.contentStyle}>5</h3>
+                    <h3 style={this.state.contentStyle}>5w</h3>
                 </div>
                 <div>
                     <h3 style={this.state.contentStyle}>6</h3>

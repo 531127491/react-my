@@ -1,24 +1,62 @@
-import react,{Component} from 'react';
-import {Button,ConfigProvider} from 'antd';
-import CarouseComponent from './ComponentManager/CarouselCompenent'
-class Main extends Component{
+import react, { Component } from 'react';
+import { Button, ConfigProvider, Row, Col, Layout } from 'antd';
+import { CarouseComponent, LoginComponent } from './StoreManager/componentManager'
+import background from './Resource/background.png'
+import Title from 'antd/lib/skeleton/Title';
+const { Header, Footer, Sider, Content } = Layout;
+const mainHeight = window.innerHeight;
 
-    constructor(props){
+const LoginStyle = {
+
+    marginLeft: '70%',
+    marginTop: '10%'
+}
+const ContentStyle = {
+    backgroundSize: '100% 100%',
+    backgroundImage: 'url(' + background + ')',
+}
+
+const TitleStyle = {
+    color: '#FFFFFF'
+}
+class MainComponent extends Component {
+
+    constructor(props) {
         super(props);
-        this.state ={
-            name:"请登录,杨菊!"
+        this.state = {
+            name: "请登录,杨菊!"
         }
     }
 
-    render(){
-        return(
-           
-            <div>
-                <CarouseComponent />
-            </div>
-            
+    render() {
+        return (
+            <div className='Main-component' >
+
+                <Layout>
+                    <Header>
+                        <h1 style={TitleStyle} align='center'>智能一体化学习平台</h1>
+                    </Header>
+                    <Layout >
+                        <Content>
+                            <CarouseComponent />
+                            <Col span={6} style={LoginStyle}>
+                                <LoginComponent />
+                            </Col>
+                        </Content>
+                        {/* <Sider>Sider</Sider> */}
+                    </Layout>
+                    <Footer style={{ background: 'white' }}>
+                        <h5 align='center'>@技术支持:  谢金宝  宋奥迪  宋家林</h5>
+                    </Footer>
+                </Layout>
+
+            </div >
+
+
+
+
         )
     }
 }
 
-export default Main;
+export default MainComponent;

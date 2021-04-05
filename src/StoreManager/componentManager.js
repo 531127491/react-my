@@ -106,6 +106,8 @@ class LoginComponent extends Component {
             let password = data.password;
             if (password == this.state.password) {
                 alert("登录成功!")
+                let history = this.props.history;
+                history.push("/home")
             } else {
                 alert("登录失败!")
             }
@@ -152,7 +154,7 @@ class LoginComponent extends Component {
                 </Form.Item> */}
 
                 <Form.Item {...tailLayout}>
-                    <Space size="large">
+                    <Space size="large" >
                         <Button type="primary" htmlType="submit">
                             注册
                     </Button>

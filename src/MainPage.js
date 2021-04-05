@@ -28,6 +28,9 @@ class MainComponent extends Component {
         }
     }
 
+    componentDidMount(){
+        let t = this.props.history;
+    }
     render() {
         return (
             <div className='Main-component' >
@@ -40,7 +43,7 @@ class MainComponent extends Component {
                         <Content>
                             <CarouseComponent />
                             <Col span={6} style={LoginStyle}>
-                                <LoginComponent />
+                                <LoginComponent history= {this.props.history} />
                             </Col>
                         </Content>
                         {/* <Sider>Sider</Sider> */}
@@ -51,10 +54,6 @@ class MainComponent extends Component {
                 </Layout>
 
             </div >
-
-
-
-
         )
     }
 }

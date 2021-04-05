@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import MainComponent from './MainPage'
+import MainComponent from './MainPage';
+import {CarouseComponent} from './StoreManager/componentManager';
 import reportWebVitals from './reportWebVitals';
-
+import RouterComponten from './RouteControl';
 ReactDOM.render(
   <React.StrictMode>
-    <MainComponent />
-  </React.StrictMode>,
+   <RouterComponten/>
+   </React.StrictMode>,
   document.getElementById('root')
 );
 
